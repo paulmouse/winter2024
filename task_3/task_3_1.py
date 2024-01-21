@@ -1,6 +1,5 @@
 salary = 0 # суммирующая переменная
 count = 0 # количество вводов зарплат
-
 while True:
     x = int(input())
     if x == 0:
