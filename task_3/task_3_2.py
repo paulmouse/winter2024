@@ -20,6 +20,7 @@ for i in range(len(strA)):
 
 print(dict1)
 
+
 # s0 = strA.count('0')
 # s1 = strA.count('1')
 # s2 = strA.count('2')
