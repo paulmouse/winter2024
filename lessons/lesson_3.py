@@ -76,13 +76,21 @@
 #     lst.append(alphabet[i] * (i+1))
 # print(lst)
 
-x = 5
+# x = 5
+#
+# while x < 10:
+#     print (x)
+#     x+= 1
+# else:
+#     print('Else')
 
-while x < 10:
-    print (x)
-    x+= 1
-else:
-    print('Else')
+summa = 0
+while True:
+    x = int(input())
+    if x < 0:
+        break
+    summa += x
+print(summa)
 
 
 

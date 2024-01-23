@@ -7,6 +7,9 @@ a = int(input('целое число:'))
 strA = str(a)
 dict1 = {}
 for i in range(len(strA)):
+#2# for i in '0123456789':
+#2#     print(i, '-', strA.count(i))
+
     dict1['0'] = strA.count('0')
     dict1['1'] = strA.count('1')
     dict1['2'] = strA.count('2')
@@ -43,5 +46,11 @@ print(dict1)
 # print(f'8-{s8}')
 # print(f'9-{s9}')
 
-
+hm = [0] * 10
+s = input()
+for k in s:
+    i = int(k)
+    hm[i] += 1
+for k, v in enumerate(hm):
+    print(k, '-', v)
 
