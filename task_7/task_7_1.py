@@ -11,7 +11,7 @@ def nod(a, b):          # функция для поиска наибольше�
     return a
 
 
-def nok(a, b):
+def nok(a, b):      #
     #print(a * b // nod(a, b))
     return a * b // nod(a, b)
 
