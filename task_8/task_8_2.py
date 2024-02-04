@@ -24,3 +24,17 @@ listOfList.sort(key=count)  # тут просто сортируем. тем с�
 # и итог
 print(listOfList)
 
+
+# lst = [[1,5,3], [2,44,1, 4], [3,3]]
+# def digits(lst):
+#     res = 0
+#     for i in lst:
+#         res += len(str(i))
+#     return res
+# new_lst = sorted(lst, key = digits)
+# print(new_lst)
+# res = []
+# for i in new_lst:
+#     res.append(sorted(i, reverse = True))
+# print(res)
+
