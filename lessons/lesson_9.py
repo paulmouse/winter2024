@@ -131,7 +131,7 @@
 #     if i[0] != '#' or i[0] == ' ' or i[0] == '\n':
 #         print(i.strip())
 
-f = open('../files/test_9.txt')
+f = open()
 for line in f:
     print(line)
 
