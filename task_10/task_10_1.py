@@ -12,7 +12,8 @@
 
 with open('../files/test_1.txt', 'r') as file:
     lines = file.readlines()
-    linesObr = [' '.join(l.split()[::-1]) for l in lines] # опять срезы джойним просто с последнего. Это как-то надо запомнить
+    linesObr = [' '.join(l.split()[::-1])
+                for l in lines] # опять срезы джойним просто с последнего. Это как-то надо запомнить
 
 with open('../files/test_2.txt', 'w') as file:
     for l in reversed(linesObr):
