@@ -25,15 +25,21 @@ ws = wb.active
 sal = {}                # пустой
 for a in range(ws.max_row):         #max_row о конца таблички гоним
     sal.update({ws.cell(row=a+1, column=1).value:ws.cell(row=a+1, column=2).value})
-print(sal)
-print(type(sal))
+#print(sal)
+#print(type(sal))
 
-sortedSal = sorted(sal.items(), key=lambda x: x[1])
-print(sortedSal)
+sortedSal = sorted(sal.items(), key=lambda x: -x[1])
+#print(sortedSal)
 
 totalSal = sum(value for key, value in sortedSal)
-print(totalSal)
+#print(totalSal)
 
-wb.create_sheet('sortedSalary')
+sortedSalary = wb.create_sheet('sortedSalary')
+
+
+for i, v in sortedSal:
+    sortedSalary.append([i, v])
+
+sortedSalary.append(['Total:', totalSal])
 
 wb.save('../files/salary.xlsx')
