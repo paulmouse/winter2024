@@ -31,9 +31,10 @@ for i in sortLines:
     # salSum += salVal[i]
     # print(salVal)
     # for j in row:
-    #      salSum = sum(int(row[-1]))
-    #      print(salSum)
-    ws.append(row)
+    #     salVal = int((row[-1]))
+    #     #salSum += salVal[i]
+    #     print(salSum)
+    # ws.append(row)
 # salSum = sum(salVal)
 # print(salSum)
 wb.save('../files/empData.xlsx')
