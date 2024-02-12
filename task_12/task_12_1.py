@@ -8,6 +8,9 @@
 # Например:
 # Ввод: X = [1, 2, 3, 4, 1, 2, 3, 4, 1, 4]
 # Вывод: [0, 4, 8], [3, 7, 9]
+# s = list(map(int, input().split()))
+# z = [int(i) for i in input().split()]
+
 
 def indexSearch(lst):
     minVal = min(lst)
@@ -16,7 +19,8 @@ def indexSearch(lst):
     # minI = lst.index((minVal))
     # minIndexes = [lst.index((minVal) for x in lst if x == minVal]
     # minIndexes = [x in enumerate(lst) for x in lst if x == minVal]
-    minIndexes = [y for y, x in enumerate(lst) if x == minVal]
+    minIndexes = [y for y in range(len(lst)) if lst[y] == minVal]       # чуть другое решение
+    # minIndexes = [y for y, x in enumerate(lst) if x == minVal]
     maxIndexes = [y for y, x in enumerate(lst) if x == maxVal]
     print(minIndexes)
     print(maxIndexes)
