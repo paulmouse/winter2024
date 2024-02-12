@@ -5,13 +5,17 @@
 
 def numCountNum(num):
     numLine = []
+    numLineSplit =[]
     # numLine = [(str(x)*x).split(',') for x in range(1, num+1)]
     numLine = [(str(x) * x) for x in range(1, num + 1)]
     print(numLine)
     # numLineSplit = [x.split() for x in numLine]
-    # print(numLineSplit)
-    numLineJoin = ''.join(numLine)
-    print(numLineJoin)
-    numLineSplit = list(numLineJoin)
+    #print(numLineSplit)
+    numLineJoin = ''.join(numLine) # собрали в одну строку
+    # print(numLineJoin)
+    # for i in numLineJoin:
+    #     # if i < 10:
+    #     numLineSplit.append(i)
+    numLineSplit = list(numLineJoin) #а теперь строку в лист, чтоб было  через запяттую. Но работает только для цивр. 10 никак(
     print(numLineSplit)
-numCountNum(5)
+numCountNum(10)
