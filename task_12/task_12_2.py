@@ -19,4 +19,4 @@ def numCountNum(num):
     #     numLineSplit.append(i)
     # numLineSplit = list(numLineJoin) #а теперь строку в лист, чтоб было  через запяттую. Но работает только для цивр. 10 никак(
     # print(numLineSplit)
-numCountNum(10)-+
+numCountNum(10)
