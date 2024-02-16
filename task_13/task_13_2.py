@@ -16,5 +16,5 @@ seq = func1()
 
 for i in seq:
     print(i, end=',')
-    if i >= 3000:
+    if i >= 30000:
         break
