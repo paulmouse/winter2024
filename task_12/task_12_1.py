@@ -21,7 +21,8 @@ def indexSearch(lst):
     # minIndexes = [x in enumerate(lst) for x in lst if x == minVal]
     minIndexes = [y for y in range(len(lst)) if lst[y] == minVal]       # чуть другое решение
     # minIndexes = [y for y, x in enumerate(lst) if x == minVal]
-    maxIndexes = [y for y, x in enumerate(lst) if x == maxVal]
+    # maxIndexes = [y for y, x in enumerate(lst) if x == maxVal]
+    maxIndexes = [y for y in range(len(lst)) if lst[y] == maxVal]
     print(minIndexes)
     print(maxIndexes)
 
