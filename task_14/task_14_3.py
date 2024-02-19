@@ -12,13 +12,23 @@
 # • Подсказка: одна строка печатается до вызова функции, а вторая после вызова
 
 
-def func(n):
-    print('*' * n)
-    n -= 1
-    if n > 0:
-        func(n)
-    n += 1
-    if n !=1:  # что бы убрать повторную печать *
-        print('*' * n)
-    return
-func(8)
+# def func(n):
+#     print('*' * n)
+#     n -= 1
+#     if n > 0:
+#         func(n)
+#     n += 1
+#     if n !=1:  # что бы убрать повторную печать *
+#         print('*' * n)
+#     return
+# func(6)
+
+# def st(n,d = 0):
+#     if n==1:
+#         print(' '* d + '* ' *n)
+#         return
+#     else:
+#         print(' ' * d + '* ' * n)
+#         st(n-1, d+1)
+#         print(' ' * d + '* ' * n)
+# st(6)

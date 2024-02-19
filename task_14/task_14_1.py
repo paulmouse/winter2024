@@ -3,6 +3,8 @@
 # цифр введенного целого числа n (n >= 0).
 
 def digitCount(s, c):
+    if s == 0:
+        s = 1
     if s > 0:
         s = int(s / 10)
         # print(s)
@@ -14,7 +16,7 @@ def digitCount(s, c):
     else:
         return c
 c = 0
-print('return:', digitCount(123123123123, c))
+print('return:', digitCount(0, c))
 
 # def digitCount(s, c):
 #     if len(s) > 0:
