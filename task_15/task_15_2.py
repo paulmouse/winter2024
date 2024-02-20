@@ -12,6 +12,7 @@ import re
 # inputString = 'H267BE178 M439KX177 X230EU78 C4286O178 Y349AY123 H494BX78'
 inputString = 'H267BE178 M439KX177 H233TC178 X230EU78 C4286O178 Y349AY123 H494BX78 A123AA78 А123АА78'
 # regex = r'\b\w{1}[ABEKMHOPCTYX]\d{3}\w{2}[ABEKMHOPCTYX]\d{2,3}[178]\b'
-regex = r'\b[ABEKMHOPCTYXАВЕКМНОРСТУХ][0-9]{3}[ABEKMHOPCTYXАВЕКМНОРСТУХ]{2}178\b|\b[ABEKMHOPCTYXАВЕКМНОРСТУХ][0-9]{3}[ABEKMHOPCTYXАВЕКМНОРСТУХ]{2}78\b'
-
+ab = 'ABEKMHOPCTYXАВЕКМНОРСТУХ'
+# regex = r'\b[ABEKMHOPCTYXАВЕКМНОРСТУХ][0-9]{3}[ABEKMHOPCTYXАВЕКМНОРСТУХ]{2}178\b|\b[ABEKMHOPCTYXАВЕКМНОРСТУХ][0-9]{3}[ABEKMHOPCTYXАВЕКМНОРСТУХ]{2}78\b'
+regex = rf'[{ab}]\d\d\d[{ab}][{ab}][1]?78'
 print(re.findall(regex,inputString))
