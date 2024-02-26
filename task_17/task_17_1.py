@@ -6,6 +6,7 @@
 
 def removeDuplicates(text):
     words = text.split()
+    #print(words)
     #print(len(text))
     #woDuplicates = dict.fromkeys(words)
     #woDuplicates = set(dict.fromkeys(words))
