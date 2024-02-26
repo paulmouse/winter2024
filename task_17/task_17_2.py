@@ -7,11 +7,20 @@ def upperCase(func):
         aList = []
         #print(args)
         for arg in args:
-            a = arg.upper()
-            aList.append(a)
+            if type(arg) != str:
+                #print(type(arg))
+                #print('')
+                pass
+            else:
+                a = arg.upper()
+                aList.append(a)
         for arg in kwargs:
-            a = kwargs[arg].upper()
-            aList.append(a)
+            if type(kwargs[arg]) != str:
+                #print(type(arg))
+                pass
+            else:
+                a = kwargs[arg].upper()
+                aList.append(a)
         print(aList)
         return func#(*args, **kwargs)
     return wrapper
@@ -20,4 +29,4 @@ def upperCase(func):
 def test(*args, **kwargs):
     pass
 
-test('Hello', 'World', 'upper', 'for', 'args', v1 = 'Hello', v2 = 'kwargstest')
+test(1, 'Hello', 'World', 234,[1,2,3], 'upper', 'for', 'args', v1 = 'Hello', v2 = 'kwargstest', v3 = 333)
