@@ -10,13 +10,14 @@
 # 4.Запросить площадь объекта
 
 class Shape:
-    def __init__(self, color, square):
+    def __init__(self, color='Blue', square=0):
         self.color = color
         self.square = square
-    def colorSet(self, color):
+    def colorSet(self, color):  #setColor
         self.color = color
-    def colorAsk(self):
+    def colorAsk(self):         #getColor
         print(self.color)
+        #return self.color  # так правильнее и аккуратнее
     def squareSet(self, square):
         self.square = square
     def squareAsk(self):
@@ -24,6 +25,9 @@ class Shape:
 
 
 retangle = Shape('Red', 234)
+triangle = Shape()
+triangle.colorAsk()
+triangle.squareAsk()
 retangle.colorAsk()
 retangle.colorSet('Green')
 retangle.colorAsk()
