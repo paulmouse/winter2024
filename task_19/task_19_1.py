@@ -5,11 +5,14 @@ import itertools
 def sumFromListCombination():
     lst = [10, 50, 100, 200, 500, 1000, 2000, 5000]
     # lstlen = len(lst)
-    allSums = itertools.chain(itertools.combinations(lst, r) for r in range(1, len(lst) + 1))
-    sumsSet = set()
-    # for s in allSums:
-    #     sumsSet.add(sum(s))
-    return sorted(allSums)
+    sumlst = []
+    allSums = itertools.chain(itertools.combinations(lst, r) for r in range(len(lst)+1))
+    # print(*allSums)
+    for i in allSums:
+        print(*i, end='\n')
+    #     sumlst.append(i)
+    # print(*sumlst)
+
         # if lstlen <= len(lst):
         #     sumFromListCombination(lstlen)
         #     lstlen += 1
