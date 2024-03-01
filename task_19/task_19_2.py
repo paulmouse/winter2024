@@ -1,13 +1,12 @@
 class Fibonacci:
     def __init__(self):
-        self.value = 0
-        self.index = 0
+        self.a = 0
+        self.b = 1
     def __iter__(self):
         return self
     def __next__(self):
-        self.value += self.value+1
-        self.index += 1
-        return self.value
+        self.a, self.b = self.b, self.a+self.b
+        return self.a
 
 fib = Fibonacci()
 for _ in range(10):
