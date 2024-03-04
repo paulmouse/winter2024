@@ -12,7 +12,7 @@ class InfiniteCycleSequence:
     def __next__(self):
         if self.counter % 2 == 0 and self.counter < 27 * 2:
             next_item = chr(65 + self.counter // 2 - 1)
-        elif self.counter >= 27 * 2:
+        elif self.counter > 26 * 2:
              self.counter = 0
              next_item = chr(65 + self.counter // 2 - 1)
         else:

@@ -4,7 +4,7 @@
 # сумму всех чисел.
 
 import pandas as pd
-
+import numpy
 dataframe = pd.DataFrame({
 'Год': [2001, 2002, 2003, 2004, 2005],
 'Товар': ['A','B','C','D','E'],
@@ -16,8 +16,8 @@ def numericSum(dataframe):
     for i in dataframe.index:
         for j in dataframe.columns:
             val = dataframe.loc[i,j]
-            # if isinstance(val, numpy.int64):
-            if type(val) is not str:  # не идеально фильтруем только не строки. Но с этими типами данных isinstace не работает(
+            if isinstance(val, numpy.int64):
+            # if type(val) == numpy.int64:  # не идеально фильтруем только не строки. Но с этими типами данных isinstace не работает(
                 # print(type(val))
                 # print(val)
                 total += val
