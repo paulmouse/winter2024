@@ -10,7 +10,7 @@ def findWay(arr):
     # print(arr[xs+1, ys])
     # print(arr[xs, ys+1])
     # print('s', start)
-    while xe > 0 or ye > 0:
+    while xe > 0 or ye > 0:  # начало матрицы, 0,0 взято как конец выполнения цикла. Оно точно будет 0,0 всегда
         way.append((ye, xe))
         sum += arr[ye, xe]
         if ye == 0:
