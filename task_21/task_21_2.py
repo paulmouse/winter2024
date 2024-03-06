@@ -3,50 +3,35 @@ import numpy as np
 def findWay(arr):
     rows = len(arr)
     cols = len(arr[0])
-    # xe = rows-1
-    # ye = cols-1
-    xe = 0
-    ye = 0
+    arr = np.rot90(np.rot90(arr))
+    xe = rows-1
+    ye = cols-1
+    # xe = 0
+    # ye = 0
     way = []
     sum = 0
-    print(xe, ye)
+    # print(arr)
+    # print(xe, ye)
     # print(arr[xs+1, ys])
     # print(arr[xs, ys+1])
     # print('s', start)
-    #####
-    # while xe > 0 or ye > 0:  # начало матрицы, 0,0 взято как конец выполнения цикла. Оно точно будет 0,0 всегда
-    #     way.append((ye, xe))
-    #     sum += arr[ye, xe]
-    #     if ye == 0:
-    #         xe -= 1
-    #     elif xe == 0:
-    #         ye -= 1
-    #     else:
-    #         if arr[ye - 1][xe] < arr[ye][xe - 1]:
-    #             ye -= 1
-    #         else:
-    #             xe -= 1
-    # way.append((0, 0))
-    # way.reverse()
-    # return way, sum + arr[0, 0]
-    #####
-    while xe <= cols-1 or ye <= rows-1:  # начало матрицы, 0,0 взято как конец выполнения цикла. Оно точно будет 0,0 всегда
-        if ye < rows-1 or xe < cols-1:
-            if arr[ye + 1][xe] < arr[ye][xe + 1]:
-                ye += 1
-                print('+y',ye,rows-1)
-            else:
-                xe += 1
-                print(xe)
-            # way.append((ye, xe))
+    ####
+    while xe > 0 or ye > 0:  # начало матрицы, 0,0 взято как конец выполнения цикла. Оно точно будет 0,0 всегда
+        way.append((ye, xe))
+        sum += arr[ye, xe]
+        if ye == 0:
+            xe -= 1
+        elif xe == 0:
+            ye -= 1
         else:
-            if ye == rows-1:
-                xe += 1
-            elif xe == cols-1:
-                ye += 1
-    # way.reverse()
-    return way, sum
-
+            if arr[ye - 1][xe] < arr[ye][xe - 1]:
+                ye -= 1
+            else:
+                xe -= 1
+    way.append((0, 0))
+    way.reverse()
+    return way, sum + arr[0, 0]
+    #####
 
 arr = np.array([[1, 3, 3], [1, 4, 3], [1, 5, 1]])
 testWay = findWay(arr)
