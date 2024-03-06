@@ -4,6 +4,7 @@ def findWay(arr):
     rows = len(arr)
     cols = len(arr[0])
     arr = np.rot90(np.rot90(arr))
+    # np.rot90(a, k=2)
     xe = rows-1
     ye = cols-1
     # xe = 0
