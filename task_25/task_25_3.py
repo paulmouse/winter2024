@@ -3,7 +3,7 @@
 # регистра). На выходе должна получиться строка в CamelStyle.
 # Например, "camel case word" => CamelCaseWord
 
-def to_camel_style(inputString):
+def toCamelStyle(inputString):
     # words = input_string.split()
     # for word in words:
     #     print(word)
@@ -15,6 +15,6 @@ def to_camel_style(inputString):
 
     return outputString
 
-inputString = "camel case word"
-result = to_camel_style(inputString)
-print(result)
+inputString = 'camel caSe wOrd teSt 4 for test'
+res = toCamelStyle(inputString)
+print(res)
