@@ -6,23 +6,18 @@ class MainWindow(QMainWindow):
         super(MainWindow, self).__init__()
         self.count = 0
         self.setWindowTitle('Приложение')
-        self.button = QPushButton(f'{self.count}')
+        self.button = QPushButton(f'На кнопку нажали: {self.count} раз')
         self.button.clicked.connect(self.the_button_was_clicked)
         self.setFixedSize(QSize(200,200))
         self.setCentralWidget(self.button)
 
     def the_button_was_clicked(self):
         self.count += 1
-        self.button.setText(f'{self.count}')
+        if self.count >=2 and self.count <=4:
+            self.button.setText(f'На кнопку нажали: {self.count} разa')
+        else: self.button.setText(f'На кнопку нажали: {self.count} раз')
 
-
-
-
-
-app = QApplication([]) # приложение
-# window = QWidget() # класс, от которого унаследованы все виджеты
-# window = QPushButton('Push me!')
-# window = QMainWindow()
+app = QApplication([])
 window = MainWindow()
-window.show() ##окно по умолчанию скрыто.
-app.exec() # запускаем цикл событий, которые обрабатывает приложение
+window.show()
+app.exec()
