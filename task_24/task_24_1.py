@@ -10,6 +10,8 @@ def sort(lst):
             if lst[j] > lst[j+1]:
                 lst[j], lst[j+1] = lst[j+1], lst[j]
 
+        print(lst)
+
 num = [3,42,64, 25, 12, 22, 11]
 sort(num)
 print(num)
