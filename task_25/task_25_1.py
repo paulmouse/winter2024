@@ -15,6 +15,7 @@ class MainWindow(QMainWindow):
         self.count += 1
         if self.count >=2 and self.count <=4:
             self.button.setText(f'На кнопку нажали: {self.count} разa')
+        elif: 
         else: self.button.setText(f'На кнопку нажали: {self.count} раз')
 
 app = QApplication([])

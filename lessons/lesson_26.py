@@ -47,44 +47,48 @@
 # print(tom.getAge())
 
 
-# class Cat:
-#     def __init__(self, name, age):
-#         self.__name = name # имя кошки
-#         self.__age = age
-#     @property # геттер свойства name
-#     def name(self):
-#         return self.__name
-#
-#     @property
-#     def age(self):
-#         return self.__age
-#     @age.getter
-#     def age(self):
-#         return self.__age
-#
-#     @name.setter
-#     def name(self, name1): # сеттер свойства name
-#         if name1.istitle():
-#             self.__name = name1
-#         else:
-#             print('Некорректный формат имени!')
-#     @age.setter
-#     def age(self, other_age): # сеттер свойства name
-#         if 1<other_age<20:
-#             self.__age = other_age
-#         else:
-#             self.__age = self.__age
-#     @age.deleter
-#     def age(self): # делитер свойства name
-#         del self.__age
-#     @name.deleter
-#     def name(self): # делитер свойства name
-#         del self.__name
-#
-# c = Cat('Мurka', 10)
-# print(c.name)
-# c.name = 'Nrka'
-# print(c.name)
+class Cat:
+    def __init__(self, name, age):
+        self.__name = name # имя кошки
+        self.__age = age
+    @property # геттер свойства name
+    def name(self):
+        return self.__name
+
+    @property
+    def age(self):
+        return self.__age
+    @age.getter
+    def age(self):
+        return self.__age
+
+    @name.setter
+    def name(self, name1): # сеттер свойства name
+        if name1.istitle():
+            self.__name = name1
+        else:
+            print('Некорректный формат имени!')
+    @age.setter
+    def age(self, other_age): # сеттер свойства name
+        self.__age = other_age
+        # if 1 < other_age < 20:
+        #     self.__age = other_age
+        # else:
+        #     self.__age = self.__age
+        #     print('Некорректный формат имени!')
+    @age.deleter
+    def age(self): # делитер свойства name
+        del self.__age
+    @name.deleter
+    def name(self): # делитер свойства name
+        del self.__name
+
+c = Cat('Мurka', 10)
+print(c.name)
+# c.name = 'crka'
+print(c.name)
+c.age(33)
+print(c.age)
 
 # class Cat:
 #     def __init__(self, name, age):
@@ -130,15 +134,15 @@
 # print(my_Foo)
 
 
-def __init__(self, name):
-    self.name = name
-
-def show(self):
-    print(self.age, self.name)
-    # return self.age
-
-Person = type('Person', (), {'age':50, 'show':show, '__init__':__init__})
-
-p = Person('Petr')
-p.show()
+# def __init__(self, name):
+#     self.name = name
+#
+# def show(self):
+#     print(self.age, self.name)
+#     # return self.age
+#
+# Person = type('Person', (), {'age':50, 'show':show, '__init__':__init__})
+#
+# p = Person('Petr')
+# p.show()
 
