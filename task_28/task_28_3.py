@@ -10,6 +10,7 @@ def hanoi(n, s1, s3, s2):
     count += hanoi(n-1, s2, s3, s1)
     return count
 
+
 n = 2
 s1 = 's1'  # 1
 s2 = 's2'  # 2
