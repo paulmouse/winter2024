@@ -1,4 +1,4 @@
-from PyQt6.QtWidgets import QApplication, QWidget, QPushButton, QMainWindow, QLabel, QVBoxLayout,QLineEdit,QHBoxLayout, QTextEdit, QGridLayout
+from PyQt6.QtWidgets import QApplication, QWidget, QPushButton, QMainWindow, QLabel, QVBoxLayout,QLineEdit,QHBoxLayout, QTextEdit, QGridLayout, QMessageBox
 from PyQt6.QtCore import QSize, Qt
 
 class Calculator(QMainWindow):
@@ -72,6 +72,7 @@ class Calculator(QMainWindow):
         self.setCentralWidget(widget)
 
     def the_button_add(self):
+        QMessageBox.about(self,'Title', 'Нажали +')
         try:
             res = '='+str(eval(self.line1.text()+'+'+self.line2.text()))
         except:
