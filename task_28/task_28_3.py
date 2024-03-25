@@ -1,19 +1,19 @@
-def hanoi(n, source, target, auxiliary):
+def hanoi(n, s1, s3, s2):
     if n == 1:
-        print("Переместить диск 1 с", source, "на", target)
+        print('1 :', s1, '->', s3)
         return 1
     count = 0
-    count += hanoi(n-1, source, auxiliary, target)
-    print("Переместить диск", n, "с", source, "на", target)
+    count += hanoi(n-1, s1, s2, s3)
+    print(n,':', s1, '->', s3)
     count += 1
-    count += hanoi(n-1, auxiliary, target, source)
+    #count += hanoi(n - 1, s3, s2, s1)
+    count += hanoi(n-1, s2, s3, s1)
     return count
 
-# Пример использования
-n = 2  # Количество дисков
-source_peg = 'A'  # Исходный стержень
-target_peg = 'C'  # Целевой стержень
-auxiliary_peg = 'B'  # Промежуточный стержень
+n = 2
+s1 = 's1'  # 1
+s2 = 's2'  # 2
+s3 = 's3'  # 3
 
-total_moves = hanoi(n, source_peg, target_peg, auxiliary_peg)
-print("Минимальное количество перемещений:", total_moves)
+res = hanoi(n, s1, s3, s2)
+print(res)
