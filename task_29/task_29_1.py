@@ -9,4 +9,5 @@ def get_key(res, value):
         if v == value:
             return k
 
+
 print(get_key(res, 1))
